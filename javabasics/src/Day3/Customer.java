@@ -6,6 +6,19 @@ public class Customer {
 	private String cname;
 	private String caddress;
 	
+	//explicit default constructor
+	public Customer () {
+		this.cid=100;
+		this.cname="unknown";
+		this.caddress="canada";
+		}
+   //parameterized constructor
+	public Customer(int cid ,String cname,String caddress) {
+		this.cid=cid;
+		this.cname=cname;
+		this.caddress=caddress;
+	}
+	
 	//Getter and Setter
 	public int getCid() {
 		return cid;
@@ -29,5 +42,10 @@ public class Customer {
 	public void setCaddress(String caddress) {
 		this.caddress = caddress;
 	}
+	@Override
+	public String toString() {
+		return "Customer [cid=" + cid + ", cname=" + cname + ", caddress=" + caddress + "]";
+	}
+	
 	
 }
